@@ -7,7 +7,9 @@ const App = () => {
   let [showContent, setShowContent] = useState(false)
 
   useGSAP(() => {
+
     const tl = gsap.timeline();
+
     tl.to(".vi-mask-group", {
       rotate: 10,
       duration: 2,
@@ -63,6 +65,12 @@ const App = () => {
           />
         </svg>
       </div>
+
+      {showContent &&
+        <div className="main w-full h- bg-black ">
+
+        </div>
+      }
 
     </>
   )
