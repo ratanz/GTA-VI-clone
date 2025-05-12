@@ -70,7 +70,7 @@ const App = () => {
         <div className="main w-full">
           <div className="landing w-full h-screen overflow-hidden bg-black">
 
-            <div className=" absolute top-0 left-0 z-[10] navbar w-full py-10 px-10 ">
+            <div className="navbar absolute top-0 left-0 z-[10]  w-full py-10 px-10 ">
               <div className="logo flex gap-5">
                 <div className="lines flex flex-col gap-[5px]">
                   <div className="line w-15 h-2 bg-white "></div>
