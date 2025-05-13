@@ -83,15 +83,24 @@ const App = () => {
             </div>
 
             <div className="images relative overflow-hidden w-full h-screen">
+
               <img className='absolute top-0 left-0 w-full h-full object-cover'
                 src="./sky.png"
                 alt="" />
               <img className='absolute top-0 left-0 w-full h-full object-cover'
                 src="./bg.png"
                 alt="" />
-              <img className='absolute bottom-[-41%] left-1/2 -translate-x-1/2 scale-[0.8]'
+
+              <div className="text text-white flex flex-col gap-3 items-center absolute top-22 left-1/2 -translate-x-1/2 ">
+                <h1 className='text-8xl -ml-50'>grand</h1>
+                <h1 className='text-8xl  ml-20'>theft</h1>
+                <h1 className='text-8xl -ml-50 -mt-4'>auto</h1>
+              </div>
+
+              <img className='absolute bottom-[-42%] left-1/2 -translate-x-1/2 scale-[0.8]'
                 src="./girlbg.png"
                 alt="" />
+
             </div>
 
             <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-7 px-10 bg-gradient-to-t from-black to-transparent">
