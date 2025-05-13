@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import 'remixicon/fonts/remixicon.css'
 
 const App = () => {
 
@@ -91,6 +92,15 @@ const App = () => {
               <img className='absolute bottom-[-40%] left-1/2 -translate-x-1/2 scale-[0.8]'
                 src="./girlbg.png"
                 alt="" />
+            </div>
+            
+            <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-5 px-10 bg-gradient-to-t from-black to-transparent">
+
+             <div className="flex gap-4 items-center">
+             <i class="text-4xl ri-arrow-down-line"></i>
+             <h3 className='text-lg font-[Neue_Montreal]'>Scroll down</h3>
+             </div>
+
             </div>
 
           </div>
