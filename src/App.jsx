@@ -81,7 +81,7 @@ const App = () => {
                 <h3 className='text-4xl text-white -mt-[8px] leading-none '>Rockstar</h3>
               </div>
             </div>
-      
+
             <div className="images relative overflow-hidden w-full h-screen">
               <img className='absolute top-0 left-0 w-full h-full object-cover'
                 src="./sky.png"
@@ -89,17 +89,21 @@ const App = () => {
               <img className='absolute top-0 left-0 w-full h-full object-cover'
                 src="./bg.png"
                 alt="" />
-              <img className='absolute bottom-[-40%] left-1/2 -translate-x-1/2 scale-[0.8]'
+              <img className='absolute bottom-[-41%] left-1/2 -translate-x-1/2 scale-[0.8]'
                 src="./girlbg.png"
                 alt="" />
             </div>
-            
-            <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-5 px-10 bg-gradient-to-t from-black to-transparent">
 
-             <div className="flex gap-4 items-center">
-             <i class="text-4xl ri-arrow-down-line"></i>
-             <h3 className='text-lg font-[Neue_Montreal]'>Scroll down</h3>
-             </div>
+            <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-7 px-10 bg-gradient-to-t from-black to-transparent">
+
+              <div className="flex gap-2 items-center ">
+                <i class="text-3xl ri-arrow-down-line"></i>
+                <h3 className='text-md font-[Neue_Montreal] uppercase'>Scroll down</h3>
+              </div>
+
+              <img className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60px]'
+                src="./ps5.png"
+                alt="" />
 
             </div>
 
