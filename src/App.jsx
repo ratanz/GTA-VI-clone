@@ -20,7 +20,7 @@ const App = () => {
     }).to(".vi-mask-group", {
       scale: 10,
       duration: 2,
-      delay: -1.8,
+      delay: -1.1,
       ease: "Expo.easeInOut",
       transformOrigin: "50% 50%",
       opacity: 0,
@@ -37,7 +37,54 @@ const App = () => {
 
   // sky , character and text animation
   useGSAP(() => {
+    if (!showContent) return;
+
     const main = document.querySelector(".main");
+
+    gsap.to(".main ", {
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay: -1,
+      ease: "Power4.easeInOut",
+    })
+
+    gsap.to(".sky", {
+      scale: 1.2,
+      rotate: 0,
+      duration: 2,
+      delay: -.8,
+      ease: "Power4.easeInOut",
+    })
+
+    gsap.to(".bg", {
+      scale: 1.1,
+      rotate: 0,
+      duration: 2,
+      delay: -.8,
+      ease: "Power4.easeInOut",
+    })
+
+    gsap.to(".character", {
+      scale: 0.8,
+      rotate: 0,
+      x: "-50%",
+      bottom: "-42%",
+      duration: 2,
+      delay: -.8,
+      ease: "Power4.easeInOut",
+    })
+
+    gsap.to(".text", {
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay: -.8,
+      ease: "Power4.easeInOut",
+    })
+
+
+
 
     main?.addEventListener("mousemove", (e) => {
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
@@ -54,7 +101,11 @@ const App = () => {
       })
 
     });
+
+
   }, [showContent])
+
+
 
 
   return (
@@ -90,8 +141,8 @@ const App = () => {
       </div>
 
       {showContent &&
-        <div className="main w-full">
-          <div className="landing w-full h-screen overflow-hidden bg-black">
+        <div className="main w-full scale-[1.9] rotate-[-10deg]">
+          <div className="landing relative w-full h-screen overflow-hidden bg-black">
 
             <div className="navbar absolute top-0 left-0 z-[10]  w-full py-10 px-10 ">
               <div className="logo flex gap-5">
@@ -106,20 +157,20 @@ const App = () => {
 
             <div className="images relative overflow-hidden w-full h-screen">
 
-              <img className='sky absolute top-0 left-0 w-full h-full object-cover scale-[1.2]'
+              <img className='sky absolute top-0 left-0 w-full h-full object-cover scale-[1.5] rotate-[20deg]'
                 src="./sky.png"
                 alt="" />
-              <img className='bg absolute top-0 left-0 w-full h-full object-cover scale-[1.1]'
+              <img className='bg absolute top-0 left-0 w-full h-full object-cover scale-[2] rotate-[-7deg]'
                 src="./bg.png"
                 alt="" />
 
-              <div className="text text-white flex flex-col gap-3 items-center absolute top-22 left-1/2 -translate-x-1/2 ">
-                <h1 className='text-8xl -ml-50'>grand</h1>
-                <h1 className='text-8xl  ml-20'>theft</h1>
-                <h1 className='text-8xl -ml-50 -mt-4'>auto</h1>
+              <div className="text text-white flex flex-col gap-3 items-center absolute top-20 left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
+                <h1 className='text-9xl -ml-50'>grand</h1>
+                <h1 className='text-9xl  ml-20'>theft</h1>
+                <h1 className='text-9xl -ml-50 -mt-4'>auto</h1>
               </div>
 
-              <img className='character absolute bottom-[-42%] left-1/2 -translate-x-1/2 scale-[0.8]'
+              <img className='character absolute bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
                 src="./girlbg.png"
                 alt="" />
 
