@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import 'remixicon/fonts/remixicon.css'
 import Lenis from 'lenis'
 
+gsap.registerPlugin(ScrollTrigger);
+
 const App = () => {
 
-  const lenis = new Lenis();
+  const lenis = new Lenis({
+    autoRaf: true,
+  });
+  
+  // Listen for the scroll event and log the event data
+  lenis.on('scroll', (e) => {
+    console.log(e);
+  });
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf)
+
 
   let [showContent, setShowContent] = useState(false)
 
@@ -42,7 +48,6 @@ const App = () => {
       }
     })
   })
-
 
   // sky , character and text animation
   useGSAP(() => {
@@ -110,6 +115,57 @@ const App = () => {
   }, [showContent])
 
 
+  useGSAP(() => {
+
+    const leftImg = document.querySelector(".left-img");
+    const rightText = document.querySelector(".right-text");
+
+    // Animate left image when it enters viewport
+    gsap.fromTo(leftImg,
+      {
+        opacity: 0,
+        x : -200,
+        scale: 0.7
+      },
+      {
+        opacity: 1,
+        x: 0,
+        scale: 1,
+        duration: 1.2,
+        ease : "easeInOut",
+        delay : 0.2,
+        scrollTrigger: {
+          trigger: leftImg,
+          start: "top center",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+
+    // Animate right text when it enters viewport
+    gsap.fromTo(rightText,
+      {
+        opacity: 0,
+        x: 200,
+        scale: 0.7
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.1,
+        scale: 1,
+        ease: "easeInOut",
+        delay : 0.6,
+        stagger : 0.2,
+        scrollTrigger: {
+          trigger: rightText,
+          start: "top center",
+          toggleActions: "play none none reverse"
+        }
+      }
+    );
+  }, [showContent])
+
   return (
     <>
       <div className="svg fixed flex items-center justify-center top-0 left-0 z-[1] w-full h-screen overflow-hidden bg-[#000]">
@@ -146,7 +202,7 @@ const App = () => {
         <div className="main w-full scale-[1.9] rotate-[-10deg]">
           <div className="landing relative w-full h-screen overflow-hidden bg-black">
 
-            <div className="navbar absolute top-0 left-0 z-[10]  w-full py-10 px-10 ">
+            <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10 ">
               <div className="logo flex gap-5">
                 <div className="lines flex flex-col gap-[5px]">
                   <div className="line w-15 h-2 bg-white "></div>
