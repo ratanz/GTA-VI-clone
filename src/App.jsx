@@ -38,12 +38,16 @@ const App = () => {
 
     main?.addEventListener("mousemove", (e) => {
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
-      gsap.to(".images .text" , {
-        x : `${xMove * 0.5}%`
+      gsap.to(".images .text", {
+        x: `${xMove * 0.5}%`
       })
 
       gsap.to(".sky", {
-        x : `${xMove * 0.20}%`
+        x: `${xMove * 0.4}%`
+      })
+
+      gsap.to(".bg", {
+        x: xMove * 1.3,
       })
 
 
@@ -103,7 +107,7 @@ const App = () => {
               <img className='sky absolute top-0 left-0 w-full h-full object-cover scale-[1.2]'
                 src="./sky.png"
                 alt="" />
-              <img className='bg absolute top-0 left-0 w-full h-full object-cover'
+              <img className='bg absolute top-0 left-0 w-full h-full object-cover scale-[1.1]'
                 src="./bg.png"
                 alt="" />
 
