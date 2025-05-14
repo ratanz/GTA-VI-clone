@@ -33,6 +33,22 @@ const App = () => {
     })
   })
 
+  useGSAP(() => {
+    const main = document.querySelector(".main");
+
+    main?.addEventListener("mousemove", (e) => {
+      const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
+      gsap.to(".images .text" , {
+        x : `${xMove * 0.5}%`
+      })
+
+      gsap.to(".sky", {
+        x : `${xMove * 0.20}%`
+      })
+
+
+    });
+  }, [showContent])
 
 
   return (
@@ -84,10 +100,10 @@ const App = () => {
 
             <div className="images relative overflow-hidden w-full h-screen">
 
-              <img className='absolute top-0 left-0 w-full h-full object-cover'
+              <img className='sky absolute top-0 left-0 w-full h-full object-cover scale-[1.2]'
                 src="./sky.png"
                 alt="" />
-              <img className='absolute top-0 left-0 w-full h-full object-cover'
+              <img className='bg absolute top-0 left-0 w-full h-full object-cover'
                 src="./bg.png"
                 alt="" />
 
@@ -97,7 +113,7 @@ const App = () => {
                 <h1 className='text-8xl -ml-50 -mt-4'>auto</h1>
               </div>
 
-              <img className='absolute bottom-[-42%] left-1/2 -translate-x-1/2 scale-[0.8]'
+              <img className='character absolute bottom-[-42%] left-1/2 -translate-x-1/2 scale-[0.8]'
                 src="./girlbg.png"
                 alt="" />
 
@@ -106,7 +122,7 @@ const App = () => {
             <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-7 px-10 bg-gradient-to-t from-black to-transparent">
 
               <div className="flex gap-2 items-center ">
-                <i class="text-3xl ri-arrow-down-line"></i>
+                <i className="text-3xl ri-arrow-down-line"></i>
                 <h3 className='text-md font-[Neue_Montreal] uppercase'>Scroll down</h3>
               </div>
 
