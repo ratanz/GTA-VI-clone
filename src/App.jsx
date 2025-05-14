@@ -2,8 +2,17 @@ import React, { useState } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import 'remixicon/fonts/remixicon.css'
+import Lenis from 'lenis'
 
 const App = () => {
+
+  const lenis = new Lenis();
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf)
 
   let [showContent, setShowContent] = useState(false)
 
@@ -201,7 +210,6 @@ const App = () => {
 
         </div>
       }
-
     </>
   )
 }
