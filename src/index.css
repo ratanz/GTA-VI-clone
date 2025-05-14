@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
     font-family: "pricedown";
     src: url("./pricedown.otf")
