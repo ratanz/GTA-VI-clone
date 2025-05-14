@@ -145,11 +145,12 @@ const App = () => {
               <div className=" relative left-img mx-10 w-1/2 h-full  ">
                 <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.2]' src="./imag.png" alt="" />
               </div>
-              <div className="right-img flex flex-col justify-center w-[35%]">
+              <div className="right-img flex flex-col justify-center itece w-[35%]">
                 <h1 className='text-8xl '>Still running,</h1>
                 <h1 className='text-8xl '>Not hunting.</h1>
                 <p className='text-xl mt-10 font-[Neue_Montreal]  '>Welcome to Vice City, where crime pays and loyalty is everything. Explore the sun-soaked beaches and neon-lit streets in the most immersive GTA VI experience yet. Build your criminal empire and leave your mark on the city's underworld.</p>
                 <p className='text-xl mt-2 font-[Neue_Montreal]'>Grand Theft Auto VI promises to redefine open-world gaming with its immersive storyline and breathtaking visuals. Set in the vibrant Vice City, players will experience unprecedented freedom in a meticulously crafted criminal underworld where every decision shapes your destiny.</p>
+                <button className=' bg-yellow-500 w-fit px-10 py-5 text-4xl text-black rounded-sm mt-10'>Download Now</button>
               </div>
             </div>
           </div>
