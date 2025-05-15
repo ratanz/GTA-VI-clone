@@ -206,11 +206,11 @@ const App = () => {
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10 ">
               <div className="logo flex gap-5">
                 <div className="lines flex flex-col gap-[5px]">
-                  <div className="line w-15 h-2 bg-white "></div>
-                  <div className="line w-8 h-2 bg-white "></div>
-                  <div className="line w-5 h-2 bg-white "></div>
+                  <div className="line md:w-15 w-12 h-2 bg-white "></div>
+                  <div className="line md:w-8 w-8 h-2 bg-white "></div>
+                  <div className="line md:w-5 w-5 h-2 bg-white "></div>
                 </div>
-                <h3 className='text-4xl text-white -mt-[8px] leading-none '>Rockstar</h3>
+                <h3 className='md:text-4xl text-3xl text-white md:-mt-[8px] -mt-2 leading-none '>Rockstar</h3>
               </div>
             </div>
 
@@ -223,13 +223,13 @@ const App = () => {
                 src="./bg.png"
                 alt="" />
 
-              <div className="text text-white flex flex-col gap-3 items-center absolute top-18 left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
-                <h1 className='text-9xl -ml-50'>grand</h1>
-                <h1 className='text-9xl  ml-20'>theft</h1>
-                <h1 className='text-9xl -ml-50 -mt-4'>auto</h1>
-              </div>
+              <div className="text text-white flex flex-col gap-3 items-center absolute md:top-18 top-1/3 left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
+                <h1 className='md:text-9xl text-8xl md:-ml-50 -ml-10'>grand</h1>
+                <h1 className='md:text-9xl text-8xl  md:ml-20 ml-20'>theft</h1>
+                <h1 className='md:text-9xl text-8xl md:-ml-50 -ml-20 -mt-4'>auto</h1>
+              </div>md:
 
-              <img className='character absolute bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
+              <img className='character absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
                 src="./girlbg.png"
                 alt="" />
 
