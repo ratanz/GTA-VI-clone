@@ -9,17 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
 
-  const lenis = new Lenis({
-    autoRaf: true,
-  });
-  
-  // Listen for the scroll event and log the event data
-  lenis.on('scroll', (e) => {
-    console.log(e);
-  });
-
-
-
   let [showContent, setShowContent] = useState(false)
 
   // landing animation 
@@ -124,16 +113,15 @@ const App = () => {
     gsap.fromTo(leftImg,
       {
         opacity: 0,
-        x : -200,
+        x: -200,
         scale: 0.7
       },
       {
         opacity: 1,
         x: 0,
         scale: 1,
-        duration: 1.2,
-        ease : "easeInOut",
-        delay : 0.2,
+        duration: 0.8,
+        ease: "easeInOut",
         scrollTrigger: {
           trigger: leftImg,
           start: "top center",
@@ -152,11 +140,11 @@ const App = () => {
       {
         opacity: 1,
         x: 0,
-        duration: 1.1,
+        duration: 0.8,
         scale: 1,
         ease: "easeInOut",
-        delay : 0.6,
-        stagger : 0.2,
+        delay: 0.2,
+        stagger: 0.2,
         scrollTrigger: {
           trigger: rightText,
           start: "top center",
@@ -165,6 +153,9 @@ const App = () => {
       }
     );
   }, [showContent])
+
+
+
 
   return (
     <>
