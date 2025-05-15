@@ -82,7 +82,18 @@ const App = () => {
       scale: 0.7,
       rotate: 0,
       x: "-50%",
-      bottom: "-42%",
+      bottom: "-45%",
+      duration: 2,
+      delay: -.8,
+      ease: "Power4.easeInOut",
+    })
+
+    
+    gsap.to(".character-mobile", {
+      scale: 1.1,
+      rotate: 0,
+      x: "-0%",
+      bottom: "-14%",
       duration: 2,
       delay: -.8,
       ease: "Power4.easeInOut",
@@ -223,13 +234,17 @@ const App = () => {
                 src="./bg.png"
                 alt="" />
 
-              <div className="text text-white flex flex-col gap-3 items-center absolute md:top-18 top-1/3 left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
-                <h1 className='md:text-9xl text-8xl md:-ml-50 -ml-10'>grand</h1>
-                <h1 className='md:text-9xl text-8xl  md:ml-20 ml-20'>theft</h1>
-                <h1 className='md:text-9xl text-8xl md:-ml-50 -ml-20 -mt-4'>auto</h1>
+              <div className="text text-white flex flex-col gap-3 items-center absolute md:top-18 top-[20%] left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
+                <h1 className='md:text-9xl text-[120px] leading-none md:-ml-50 -ml-10'>grand</h1>
+                <h1 className='md:text-9xl text-[120px] leading-none  md:ml-20 ml-20'>theft</h1>
+                <h1 className='md:text-9xl text-[120px] leading-none md:-ml-50 -ml-14 -mt-4'>auto</h1>
               </div>md:
 
-              <img className='character absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
+              <img className='character hidden lg:block absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
+                src="./girlbg.png"
+                alt="" />
+
+              <img className='character-mobile absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
                 src="./girlbg.png"
                 alt="" />
 
@@ -237,7 +252,7 @@ const App = () => {
 
             <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-7 px-10 bg-gradient-to-t from-black to-transparent">
 
-              <div className="flex gap-2 items-center ">
+              <div className="flex gap-2 items-center md:opacity-100 opacity-0  ">
                 <i className="text-3xl ri-arrow-down-line"></i>
                 <h3 className='text-md font-[Neue_Montreal] uppercase'>Scroll down</h3>
               </div>
