@@ -92,7 +92,7 @@ const App = () => {
     gsap.to(".character-mobile", {
       scale: 1.1,
       rotate: 0,
-      x: "-0%",
+      x: "-50%",
       bottom: "-14%",
       duration: 2,
       delay: -.8,
@@ -244,7 +244,7 @@ const App = () => {
                 src="./girlbg.png"
                 alt="" />
 
-              <img className='character-mobile absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
+              <img className='character-mobile md:hidden absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
                 src="./girlbg.png"
                 alt="" />
 
