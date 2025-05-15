@@ -9,14 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
 
-  const lenis = new Lenis({
-    autoRaf: true,
-  });
+  // const lenis = new Lenis({
+  //   autoRaf: true,
+  // });
 
-  // Listen for the scroll event and log the event data
-  lenis.on('scroll', (e) => {
-    console.log(e);
-  });
+  // // Listen for the scroll event and log the event data
+  // lenis.on('scroll', (e) => {
+  //   console.log(e);
+  // });
 
 
   let [showContent, setShowContent] = useState(false)
@@ -88,7 +88,7 @@ const App = () => {
       ease: "Power4.easeInOut",
     })
 
-    
+
     gsap.to(".character-mobile", {
       scale: 1.1,
       rotate: 0,
@@ -265,17 +265,20 @@ const App = () => {
 
           </div>
 
-          <div className="page2 w-full h-screen overflow-hidden flex items-center justify-center px-10 bg-black">
-            <div className="content w-full flex text-white h-[80%] ">
-              <div className=" relative left-img mx-10 w-1/2 h-full  ">
+          <div className="page2 w-full md:h-screen h-[150vh] overflow-hidden flex items-center justify-center px-10 bg-black">
+            <div className="content w-full flex md:flex-row flex-col text-white md:h-[80%]">
+              <div className="relative left-img mx-4 md:w-1/2 w-full h-[300px] md:h-auto mb-8 md:mb-0">
                 <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.1]' src="./imag.png" alt="" />
               </div>
-              <div className="right-text flex flex-col justify-center itece w-[35%]">
-                <h1 className='text-7xl '>Still running,</h1>
-                <h1 className='text-7xl '>Not hunting.</h1>
-                <p className='text-xl mt-10 font-[Neue_Montreal]  '>Welcome to Vice City, where crime pays and loyalty is everything. Explore the sun-soaked beaches and neon-lit streets in the most immersive GTA VI experience yet. Build your criminal empire and leave your mark on the city's underworld.</p>
-                <p className='text-xl mt-2 font-[Neue_Montreal]'>Grand Theft Auto VI promises to redefine open-world gaming with its immersive storyline and breathtaking visuals. Set in the vibrant Vice City, players will experience unprecedented freedom in a meticulously crafted criminal underworld where every decision shapes your destiny.</p>
-                <button className=' bg-yellow-500 w-fit px-10 py-5 text-4xl text-black rounded-sm mt-10'>Download Now</button>
+
+              <div className="right-text flex flex-col justify-center md:mt-0 mt-10 md:w-[35%] w-full">
+                <h1 className='text-7xl md:text-left text-center'>Still running,</h1>
+                <h1 className='text-7xl md:text-left text-center'>Not hunting.</h1>
+                <p className='lg:text-xl md:text-lg sm:text-sm mt-10 font-[Neue_Montreal] md:text-left text-center'>Welcome to Vice City, where crime pays and loyalty is everything. Explore the sun-soaked beaches and neon-lit streets in the most immersive GTA VI experience yet. Build your criminal empire and leave your mark on the city's underworld.</p>
+                <p className='lg:text-xl md:text-lg sm:text-sm mt-2 font-[Neue_Montreal] md:text-left text-center'>Grand Theft Auto VI promises to redefine open-world gaming with its immersive storyline and breathtaking visuals. Set in the vibrant Vice City, players will experience unprecedented freedom in a meticulously crafted criminal underworld where every decision shapes your destiny.</p>
+                <div className="flex md:justify-start justify-center">
+                  <button className='bg-yellow-500 w-fit md:px-10 px-5 py-2 md:py-5 md:text-4xl text-2xl text-black rounded-sm md:mt-10 mt-4'>Download Now</button>
+                </div>
               </div>
             </div>
           </div>
