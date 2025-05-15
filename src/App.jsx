@@ -79,7 +79,7 @@ const App = () => {
     })
 
     gsap.to(".character", {
-      scale: 0.8,
+      scale: 0.7,
       rotate: 0,
       x: "-50%",
       bottom: "-42%",
@@ -223,7 +223,7 @@ const App = () => {
                 src="./bg.png"
                 alt="" />
 
-              <div className="text text-white flex flex-col gap-3 items-center absolute top-20 left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
+              <div className="text text-white flex flex-col gap-3 items-center absolute top-18 left-1/2 -translate-x-1/2 scale-[1.9] rotate-[-10deg] ">
                 <h1 className='text-9xl -ml-50'>grand</h1>
                 <h1 className='text-9xl  ml-20'>theft</h1>
                 <h1 className='text-9xl -ml-50 -mt-4'>auto</h1>
