@@ -18,7 +18,6 @@ const App = () => {
   //   console.log(e);
   // });
 
-
   let [showContent, setShowContent] = useState(false)
 
   // landing animation 
@@ -125,6 +124,7 @@ const App = () => {
   }, [showContent])
 
 
+  // page 2 animation.
   useGSAP(() => {
 
     const leftImg = document.querySelector(".left-img");
@@ -175,11 +175,9 @@ const App = () => {
     );
   }, [showContent])
 
-
-
-
   return (
     <>
+      {/* loading screen svg */}
       <div className="svg fixed flex items-center justify-center top-0 left-0 z-[1] w-full h-screen overflow-hidden bg-[#000]">
         <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
           <defs>
@@ -226,7 +224,6 @@ const App = () => {
             </div>
 
             <div className="images relative overflow-hidden w-full h-screen">
-
               <img className='sky absolute top-0 left-0 w-full h-full object-cover scale-[1.5] rotate-[20deg]'
                 src="./sky.png"
                 alt="" />
@@ -238,7 +235,7 @@ const App = () => {
                 <h1 className='md:text-9xl text-[120px] leading-none md:-ml-50 -ml-10'>grand</h1>
                 <h1 className='md:text-9xl text-[120px] leading-none  md:ml-20 ml-20'>theft</h1>
                 <h1 className='md:text-9xl text-[120px] leading-none md:-ml-50 -ml-14 -mt-4'>auto</h1>
-              </div>md:
+              </div>
 
               <img className='character hidden lg:block absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
                 src="./girlbg.png"
@@ -247,7 +244,6 @@ const App = () => {
               <img className='character-mobile md:hidden absolute md:bottom-[-200%] left-1/2 -translate-x-1/2 scale-[2.5] rotate-[-20deg]'
                 src="./girlbg.png"
                 alt="" />
-
             </div>
 
             <div className="bottom-bar text-white absolute bottom-0 left-0 w-full py-7 px-10 bg-gradient-to-t from-black to-transparent">
@@ -260,25 +256,29 @@ const App = () => {
               <img className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60px]'
                 src="./ps5.png"
                 alt="" />
-
             </div>
-
           </div>
 
           <div className="page2 w-full md:h-screen h-[150vh] overflow-hidden flex items-center justify-center px-10 bg-black">
             <div className="content w-full flex md:flex-row flex-col text-white md:h-[80%]">
-              <div className="relative left-img mx-4 md:w-1/2 w-full h-[300px] md:h-auto mb-8 md:mb-0">
-                <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.1]' src="./imag.png" alt="" />
+              <div className="left-img relative mx-4 md:w-1/2 w-full h-[300px] md:h-auto mb-8 md:mb-0">
+                <img className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.1]' 
+                src="./imag.png" 
+                alt="" />
               </div>
 
               <div className="right-text flex flex-col justify-center md:mt-0 mt-10 md:w-[35%] w-full">
                 <h1 className='text-7xl md:text-left text-center'>Still running,</h1>
                 <h1 className='text-7xl md:text-left text-center'>Not hunting.</h1>
+               
                 <p className='lg:text-xl md:text-lg sm:text-sm mt-10 font-[Neue_Montreal] md:text-left text-center'>Welcome to Vice City, where crime pays and loyalty is everything. Explore the sun-soaked beaches and neon-lit streets in the most immersive GTA VI experience yet. Build your criminal empire and leave your mark on the city's underworld.</p>
-                <p className='lg:text-xl md:text-lg sm:text-sm mt-2 font-[Neue_Montreal] md:text-left text-center'>Grand Theft Auto VI promises to redefine open-world gaming with its immersive storyline and breathtaking visuals. Set in the vibrant Vice City, players will experience unprecedented freedom in a meticulously crafted criminal underworld where every decision shapes your destiny.</p>
+                <p className='lg:text-xl md:text-lg sm:text-sm mt-2 font-[Neue_Montreal] md:text-left text-center'>Grand Theft Auto VI promises to redefine open-world gaming with its immersive storyline and breathtaking visuals. Set in the vibrant Vice City, players will experience unprecedented freedom in a meticulously crafted criminal underworld where every decision shapes your destiny.
+                </p>
+
                 <div className="flex md:justify-start justify-center">
                   <button className='bg-yellow-500 w-fit md:px-10 px-5 py-2 md:py-5 md:text-4xl text-2xl text-black rounded-sm md:mt-10 mt-4'>Download Now</button>
                 </div>
+                
               </div>
             </div>
           </div>
