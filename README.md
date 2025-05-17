@@ -1,12 +1,44 @@
-# React + Vite
+# GTA VI Animated Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visually stunning GTA VI-themed website built with **React**, **Tailwind CSS**, and **GSAP** for smooth, immersive animations and a clean, modern UI. This project is a fan-made landing page inspired by the world of Grand Theft Auto VI, featuring animated transitions, parallax effects, and a responsive design.
 
-Currently, two official plugins are available:
+## ✨ Features
+- **React** for fast, component-based development
+- **Tailwind CSS** for utility-first, responsive styling
+- **GSAP** (GreenSock Animation Platform) for advanced, buttery-smooth animations
+- **Lenis** for smooth scrolling
+- Clean, modern, and mobile-friendly UI
+- Eye-catching animated landing and content sections
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Preview
+Take a look at some of the visuals from the site:
 
-## Expanding the ESLint configuration
+<p align="center">
+  <img src="./public/bg.png" alt="GTA VI Background" width="400" />
+  <img src="./public/imag.png" alt="GTA VI Character" width="400" />
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Getting Started
+To run this project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd GTA
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser to view the site.
+
+## 🌐 Live Demo
+A live version will be available soon! <!-- Add your deployed link here -->
+
+---
+
+> **Note:** All images and assets are for demonstration purposes only. This project is not affiliated with Rockstar Games or the official Grand Theft Auto series.
