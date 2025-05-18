@@ -1,6 +1,6 @@
 # GTA VI Animated Landing Page
 
-A visually stunning GTA VI-themed website built with **React**, **Tailwind CSS**, and **GSAP** for smooth, immersive animations and a clean, modern UI. This project is a fan-made landing page inspired by the world of Grand Theft Auto VI, featuring animated transitions, parallax effects, and a responsive design.
+A visually stunning GTA VI-themed website built with **React**, **Tailwind CSS**, and **GSAP** for smooth, immersive animations and a clean, modern UI. This project is a fan-made landing page inspired by the world of Grand Theft Auto VI, featuring animated transitions, parallax effects, and responsive design.
 
 ## ✨ Features
 - **React** for fast, component-based development
